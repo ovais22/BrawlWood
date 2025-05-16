@@ -20,6 +20,7 @@ import villainFinalBossWalk from "../../../assets/VillainFinalBoss/Run.png";
 import villainFinalBossAttack from "../../../assets/VillainFinalBoss/Attack_2.png";
 import villainFinalBossAttack2 from "../../../assets/VillainFinalBoss/Attack_1.png";
 import villainFinalBossDead from "../../../assets/VillainFinalBoss/Dead.png";
+import bar from "../../../assets/bar.png";
 import heart from "../../../assets/heart.png"
 import fire from "../../../assets/fire.png"
 
@@ -28,6 +29,8 @@ export default function preload(scene){
     scene.load.image('heart', heart);
     scene.load.image('blockimg', blockimg);
     scene.load.image('fire', fire);
+    scene.load.image('bar', bar);
+
 
     scene.load.spritesheet('kart', kart,
         { frameWidth: 128, frameHeight: 105}

@@ -110,6 +110,9 @@ export default function update(scene){
             scene.scene.start('GameOver')
         }, [], scene);   
     }
+    if(villain1Dead){
+        scene.bar.destroy();
+    }
     if(!villain1Dead){
         // if (Math.abs(distance) > 50 && Math.abs(distance) < 500 && scene.player.y < 400) {
         //     // console.log(distance)
@@ -401,7 +404,7 @@ var keyObject1 = scene.input.keyboard.addKey("Z");
 var keyObject2 = scene.input.keyboard.addKey("X");
 var keyObject3 = scene.input.keyboard.addKey("C");
 
-if (Phaser.Input.Keyboard.JustDown(keyObject1) && !HeroDead && !playerattackingV1) {
+if (Phaser.Input.Keyboard.JustDown(keyObject1) && !HeroDead && !playerattackingV1 && !playerattackingVillainFinalBoss) {
     playerattacking = true
     player.setVelocityX(0)
     player.anims.play('attack_1', true);
@@ -427,7 +430,7 @@ if (Phaser.Input.Keyboard.JustDown(keyObject1) && !HeroDead && !playerattackingV
         }, [], scene);
     }
 }
-else if (Phaser.Input.Keyboard.JustDown(keyObject2) && !HeroDead && !playerattackingV1) {
+else if (Phaser.Input.Keyboard.JustDown(keyObject2) && !HeroDead && !playerattackingV1 && !playerattackingVillainFinalBoss) {
     playerattacking = true
     player.setVelocityX(0)
     player.anims.play('attack_2', true);
@@ -453,7 +456,7 @@ else if (Phaser.Input.Keyboard.JustDown(keyObject2) && !HeroDead && !playerattac
         }, [], scene);
     }
 }
-else if (Phaser.Input.Keyboard.JustDown(keyObject3) && !HeroDead && !playerattackingV1) {
+else if (Phaser.Input.Keyboard.JustDown(keyObject3) && !HeroDead && !playerattackingV1 && !playerattackingVillainFinalBoss) {
     playerattacking = true
     player.setVelocityX(0)
     player.anims.play('attack_3', true);

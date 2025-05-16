@@ -10,6 +10,7 @@ export default function create(scene){
     //\\
     // scene.add.image(1400, 155, 'heart').setScale(0.3);
     const heart = scene.physics.add.sprite(1400, 155, 'heart2').setScale(0.3).setSize(0, 0).setOffset(0, 10).setCollideWorldBounds(true).setBounce(0.08).setGravityY(300);
+    const bar = scene.physics.add.staticGroup().create(1720, 350, 'bar').setSize(0, 0).setOffset(0, 10).setScale(1.1).refreshBody();
     
     //\\
     scene.physics.world.setBounds(0, 0, 2800, 700);
@@ -39,6 +40,7 @@ export default function create(scene){
     scene.physics.add.collider(scene.villain1, block)
     scene.physics.add.collider(scene.villainFinalBoss, block)
     scene.physics.add.collider(heart, block)
+    scene.physics.add.collider(player, bar)
 
     scene.cameras.main.startFollow(player, true, 0.1, 0.1);
     scene.cameras.main.setFollowOffset(0, 0);
@@ -47,6 +49,7 @@ export default function create(scene){
 
     scene.player = player
     scene.heart = heart
+    scene.bar = bar
     scene.cursors = scene.input.keyboard.createCursorKeys();
 
     const screenWidth = scene.scale.width;
