@@ -2,7 +2,7 @@ import Phaser from 'phaser'
 import MainGame from './MainGame/MainGame';
 import MainMenuScene from './MainMenuScene/MainMenuScene';
 import GameOverScene from './GameOverScene/GameOverScene';
-import Victory from './Victory/victory';
+import Victory from './Victory/Victory';
 var conf = {
     type: Phaser.AUTO,
     width: 1400,
