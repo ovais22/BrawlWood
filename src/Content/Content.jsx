@@ -18,7 +18,7 @@ function Content() {
         <div className='w-[1416px] h-full pt-2 px-2 flex flex-col justify-center items-center bg-white rounded-2xl'>
           <div id={someID}/>
           <div className='flex items-center justify-evenly align-middle bg-black p-0 my-1 rounded-b-2xl w-[1400px]'>
-            <a href="https://github.com/ovais22" class="inline-block hover:bg-gray-800">
+            <a href="https://github.com/ovais22/BrawlWood" class="inline-block hover:bg-gray-800">
               <img className='h-12 invert' src={GitImage} alt="" />
             </a>
             <a href="https://www.linkedin.com/in/ovais22/" class="inline-block hover:bg-gray-800">
